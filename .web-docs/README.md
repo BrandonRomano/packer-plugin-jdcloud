@@ -2,8 +2,7 @@ The jdcloud Packer builder helps you to build instance images based on an existi
 
 ### Installation
 
-To install this plugin, copy and paste this code into your Packer configuration .
-Then, run [`packer init`](https://www.packer.io/docs/commands/init).
+To install this plugin, copy and paste this code into your Packer configuration, then run [`packer init`](https://www.packer.io/docs/commands/init).
 
 ```hcl
 packer {
