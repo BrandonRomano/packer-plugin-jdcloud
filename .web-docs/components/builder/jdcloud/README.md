@@ -4,23 +4,6 @@ Artifact BuilderId: `hashicorp.jdcloud`
 The `jdcloud` Packer builder helps you to build instance images
 based on an existing image
 
-## Installation Using the `packer init` command
-
-To install this plugin using Packer version 1.7 or later, copy and paste this
-code into your Packer configuration. Then, run
-[`packer init`](https://www.packer.io/docs/commands/init).
-
-```hcl
-packer {
-  required_plugins {
-    jdcloud = {
-      version = ">= 1.0.0"
-      source  = "github.com/hashicorp/jdcloud"
-    }
-  }
-}
-```
-
 ## Configuration Reference
 
 In order to build a JDCloud instance image, full-fill your configuration file. Necessary attributes

@@ -2,7 +2,7 @@
 # https://github.com/hashicorp/integration-template#metadata-configuration
 integration {
   name = "JD Cloud"
-  description = "TODO"
+  description = "The JD Cloud plugin can be used with HashiCorp Packer to create custom images on JDCloud."
   identifier = "packer/BrandonRomano/jdcloud"
   component {
     type = "builder"

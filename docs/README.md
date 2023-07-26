@@ -1,16 +1,6 @@
-# JDCloud Plugin
+The jdcloud Packer builder helps you to build instance images based on an existing image in [JDCloud](https://www.jdcloud.com/).
 
-The jdcloud Packer builder helps you to build instance images based on an existing image in [JDcloud](https://www.jdcloud.com/)
-
-## Installation
-
-### Using pre-built releases
-
-#### Using the `packer init` command
-
-Starting from version 1.7, Packer supports a new `packer init` command allowing
-automatic installation of Packer plugins. Read the
-[Packer documentation](https://www.packer.io/docs/commands/init) for more information.
+### Installation
 
 To install this plugin, copy and paste this code into your Packer configuration .
 Then, run [`packer init`](https://www.packer.io/docs/commands/init).
@@ -19,37 +9,22 @@ Then, run [`packer init`](https://www.packer.io/docs/commands/init).
 packer {
   required_plugins {
     jdcloud = {
-      version = ">= 1.0.0"
       source  = "github.com/hashicorp/jdcloud"
+      version = "~> 1"
     }
   }
 }
 ```
 
-#### Manual installation
+Alternatively, you can use `packer plugins install` to manage installation of this plugin.
 
-You can find pre-built binary releases of the plugin [here](https://github.com/hashicorp/packer-plugin-jdcloud/releases).
-Once you have downloaded the latest archive corresponding to your target OS,
-uncompress it to retrieve the plugin binary file corresponding to your platform.
-To install the plugin, please follow the Packer documentation on
-[installing a plugin](https://www.packer.io/docs/extending/plugins/#installing-plugins).
+```sh
+$ packer plugins install github.com/hashicorp/jdcloud
+```
 
+### Components
 
-#### From Source
+#### Builders
 
-If you prefer to build the plugin from its source code, clone the GitHub
-repository locally and run the command `go build` from the root
-directory. Upon successful compilation, a `packer-plugin-jdcloud` plugin
-binary file can be found in the root directory.
-To install the compiled plugin, please follow the official Packer documentation
-on [installing a plugin](https://www.packer.io/docs/extending/plugins/#installing-plugins).
-
-
-## Plugin Contents
-
-The JDCloud plugin allows Packer to communicate with JD cloud, and includes:
-
-### Builders
-
-- [builder](/docs/builders/builder-jdcloud.mdx) - The `jdcloud` Packer builder helps you to build instance images
+- [builder](/packer/integrations/hashicorp/jdcloud/latest/components/builder/jdcloud.mdx) - The `jdcloud` Packer builder helps you to build instance images
 based on an existing image
